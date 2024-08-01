@@ -1,21 +1,21 @@
 import java.util.Scanner;
 
 public class Main {
+    public static void findGcd(int n, int m) {
+        int gcd = 0;
+        for (int i = 1; i <= Math.min(n, m); i++) {
+            if (n % i == 0 && m % i == 0) {
+                gcd = i;
+            }
+        }
+        System.out.print(gcd);
+    }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         int m = scan.nextInt();
-        int result = 0;
-
-        if ((n == 1) || (m == 1)) {
-            result = 1;
-        } else if (n < m) {
-            result = (m % n);
-        } else if (n > m) {
-            result = (n % m);
-        } else if (n == m) {
-            result = n;
-        }
-        System.out.println(result);
+        
+        findGcd(n, m);
     }
 }
