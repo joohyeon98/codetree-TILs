@@ -7,12 +7,14 @@ public class Main {
         int m = scan.nextInt();
         int result = 0;
 
-        if ((n == 1) || (m == 1) || (n == m)) {
+        if ((n == 1) || (m == 1)) {
             result = 1;
         } else if (n < m) {
             result = (m % n);
         } else if (n > m) {
             result = (n % m);
+        } else if (n == m) {
+            result = n;
         }
         System.out.println(result);
     }
