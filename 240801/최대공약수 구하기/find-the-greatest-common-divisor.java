@@ -7,9 +7,11 @@ public class Main {
         int m = scan.nextInt();
         int result = 0;
 
-        if (n < m) {
+        if ((n == 1) || (m == 1)) {
+            result = 1;
+        } else if (n < m) {
             result = (m % n);
-        } else {
+        } else if (n > m) {
             result = (n % m);
         }
         System.out.println(result);
