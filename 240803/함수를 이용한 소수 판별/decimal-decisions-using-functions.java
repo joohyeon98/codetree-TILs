@@ -6,7 +6,7 @@ public class Main {
             return false;
         }
         for (int i = 2; i < n; i++) {
-            if (i % n == 0) {
+            if (n % i == 0) {
                 return false;
             }
         }
