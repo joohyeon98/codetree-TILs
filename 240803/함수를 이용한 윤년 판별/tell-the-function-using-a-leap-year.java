@@ -4,10 +4,9 @@ public class Main {
     public static boolean year(int n) {
         if ((n % 4 != 0) && (n % 100 == 0)) {
             return false;
-        } else if (n % 4 == 0) {
+        } else {
             return true;
         }
-        return true;
     }
 
     public static void main(String[] args) {
